@@ -1,6 +1,6 @@
 ﻿using System;
 using RestSharp;
-namespace StockApp
+namespace StockApp.Data
 {
 /// <summary>
 /// This class is the service access layer, connecting to markitondemand's stock quote api.

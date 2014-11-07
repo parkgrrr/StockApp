@@ -1,6 +1,8 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using StockApp.Data;
+using StockApp.Views;
 
 namespace StockApp
 {
@@ -8,17 +10,12 @@ namespace StockApp
 	{
 		public static Page GetMainPage ()
 		{	
-            var servResponse = new StockService();
-            stockQuote quote = servResponse.getQuote();
+           // var servResponse = new StockService();
+           // stockQuote quote = servResponse.getQuote();
             
-            
-			return new ContentPage { 
-				Content = new Label {
-					Text = "The name for that ticker is: "+ quote.Name, //returns the quote to the main page
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					HorizontalOptions = LayoutOptions.CenterAndExpand,
-				},
-			};
+            NavigationPage mainNav = new NavigationPage(new StockInfoPage());
+
+            return mainNav;
 		}
 	}
 }
