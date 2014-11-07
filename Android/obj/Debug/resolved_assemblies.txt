@@ -1,5 +1,6 @@
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\StockApp.Android.dll
 C:\Users\Parker\Documents\GitHub\StockApp\packages\Xamarin.Forms.1.2.3.6257\lib\MonoAndroid10\FormsViewGroup.dll
+C:\Users\Parker\Documents\GitHub\StockApp\packages\Newtonsoft.Json.6.0.6\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll
 C:\Users\Parker\Documents\GitHub\StockApp\Components\restsharp-104.4.0.1\lib\android\RestSharp.MonoDroid.dll
 C:\Users\Parker\Documents\GitHub\StockApp\packages\Xamarin.Android.Support.v13.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v13.dll
 C:\Users\Parker\Documents\GitHub\StockApp\packages\Xamarin.Android.Support.v4.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v4.dll

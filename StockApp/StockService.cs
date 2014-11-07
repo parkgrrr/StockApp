@@ -17,15 +17,15 @@ namespace StockApp
         /// This method connects to the web service and retrieves xml or possibly json in the future.
         /// </summary>
         /// <returns>currently the raw xml response as a string, but will change.</returns>
-        public string getQuote()
+        public stockQuote getQuote()
         {
-            var clientQuote = new RestClient("http://dev.markitondemand.com/Api/v2/");
-            var requestQuote = new RestRequest("Quote/", Method.POST);
-            requestQuote.AddParameter("Symbol", qSymbol);
-            //requestQuote.RequestFormat = DataFormat.Json; //This isn't working, could change to GET and add jsonp? to url manually
+			var clientQuote = new RestClient("http://dev.markitondemand.com/Api/v2/");
+			var requestQuote = new RestRequest("Quote/json", Method.GET);
+			requestQuote.AddParameter("symbol", qSymbol);
             var responseQuote = clientQuote.Execute(requestQuote);
-            var content = responseQuote.Content;
-            return content;
+            var jsonQuote = responseQuote.Content;
+            var quoteObj = new stockQuote(jsonQuote);
+            return quoteObj;
 
         }
 

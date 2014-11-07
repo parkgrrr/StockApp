@@ -21,3 +21,5 @@ C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\res\drawable\icon.pn
 C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\R.cs.flag
 C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\uploadflags.txt
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Android.Support.v13.dll
+C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Newtonsoft.Json.xml

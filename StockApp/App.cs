@@ -8,10 +8,13 @@ namespace StockApp
 	{
 		public static Page GetMainPage ()
 		{	
-            StockService quote = new StockService();
+            var servResponse = new StockService();
+            stockQuote quote = servResponse.getQuote();
+            
+            
 			return new ContentPage { 
 				Content = new Label {
-					Text = quote.getQuote(), //returns the quote to the main page
+					Text = "The name for that ticker is: "+ quote.Name, //returns the quote to the main page
 					VerticalOptions = LayoutOptions.CenterAndExpand,
 					HorizontalOptions = LayoutOptions.CenterAndExpand,
 				},
