@@ -1,6 +1,5 @@
 ﻿using System;
 using RestSharp;
-using StockApp.ViewModel;
 namespace StockApp.Data
 {
 /// <summary>
@@ -26,7 +25,6 @@ namespace StockApp.Data
             var responseQuote = clientQuote.Execute(requestQuote);
             var jsonQuote = responseQuote.Content;
             var quoteObj = new stockQuote(jsonQuote);
-            
             return quoteObj;
 
         }
