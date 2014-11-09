@@ -30,6 +30,108 @@ namespace StockApp.ViewModel
             }
         }
 
+        public int PurchasePrice
+        {
+            get { return _stockService != null ? _stockService.PurchasePrice : 0; }
+            set
+            {
+                if (_stockService != null)
+                {
+                    _stockService.PurchasePrice = value;
+
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("PurchasePrice"));
+                    }
+                }
+            }
+        }
+
+        public int ShareAmount
+        {
+            get { return _stockService != null ? _stockService.ShareAmount : 0; }
+            set
+            {
+                if (_stockService != null)
+                {
+                    _stockService.ShareAmount = value;
+
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("ShareAmount"));
+                    }
+                }
+            }
+        }
+
+        public decimal PurchaseFees
+        {
+            get { return _stockService != null ? _stockService.PurchaseFees : 0; }
+            set
+            {
+                if (_stockService != null)
+                {
+                    _stockService.PurchaseFees = value;
+
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("PurchaseFees"));
+                    }
+                }
+            }
+        }
+
+        public decimal SellingFees
+        {
+            get { return _stockService != null ? _stockService.SellingFees : 0; }
+            set
+            {
+                if (_stockService != null)
+                {
+                    _stockService.SellingFees = value;
+
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("SellingFees"));
+                    }
+                }
+            }
+        }
+
+        public decimal ProfitDollar
+        {
+            get { return _stockService != null ? _stockService.ProfitDollar : 0; }
+            set
+            {
+                if (_stockService != null)
+                {
+                    _stockService.ProfitDollar = value;
+
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("ProfitDollar"));
+                    }
+                }
+            }
+        }
+
+        public decimal ProfitPercent
+        {
+            get { return _stockService != null ? _stockService.ProfitPercent : 0; }
+            set
+            {
+                if (_stockService != null)
+                {
+                    _stockService.ProfitPercent = value;
+
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("ProfitPercent"));
+                    }
+                }
+            }
+        }
+
         public interface INotifyPropertyChanged
         {
             event PropertyChangedEventHandler PropertyChanged;

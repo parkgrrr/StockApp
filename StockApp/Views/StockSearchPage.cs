@@ -22,6 +22,8 @@ namespace StockApp.Views
             //Padding = new Thickness(20);
             var tickerInput = new Entry { Placeholder = "Enter Stock Symbol" };
             tickerInput.SetBinding(Entry.TextProperty, "qSymbol");
+            //var shareInput = new Entry { Placeholder = "Enter Amount of Shares" };
+            //shareInput.SetBinding(Entry.TextProperty, "ShareAmount");
             
             
             
@@ -48,8 +50,7 @@ namespace StockApp.Views
         
         async void SetStock(object sender, EventArgs eventArgs)
         {
-                    
-                      
+           
             await Navigation.PopAsync();
 
         }

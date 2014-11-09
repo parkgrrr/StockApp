@@ -46,7 +46,7 @@ namespace StockApp.Views
             });
             calculate = new ToolbarItem("Calculate", null, async () =>
             {
-                await Navigation.PushAsync(new StockSearchPage(ssvm));
+                await Navigation.PushAsync(new StockCalcPage(ssvm));
             });
 
             
@@ -62,16 +62,46 @@ namespace StockApp.Views
             if (sService.qSymbol != null)
             {
                 var quoteObj = sService.getQuote();
-                var labelQuote = new Label
+                var labelName = new Label
                 {
-                    Text = quoteObj.Name+" "+quoteObj.LastPrice,
+                    Text = quoteObj.Name,
+
+                };
+                var labelLastPrice = new Label
+                {
+                    Text = quoteObj.LastPrice.ToString(),
+
+                };
+                var labelChange = new Label
+                {
+                    Text = quoteObj.Change.ToString(),
+
+                };
+                var labelPercent = new Label
+                {
+                    Text = quoteObj.ChangePercent.ToString(),
+
+                };
+                var labelTime = new Label
+                {
+                    Text = quoteObj.TimeStamp,
+
+                };
+                var labelMarket = new Label
+                {
+                    Text = quoteObj.MarketCap.ToString(),
+
+                };
+                var labelVolume = new Label
+                {
+                    Text = quoteObj.Volume.ToString(),
 
                 };
                 Content = new StackLayout
                 {
                     //Spacing = 10,
                     VerticalOptions = LayoutOptions.Center,
-                    Children = { labelQuote }
+                    Children = { labelName, labelLastPrice, labelChange, labelPercent }
                 };
             }
             else

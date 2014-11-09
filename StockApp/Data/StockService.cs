@@ -29,7 +29,13 @@ namespace StockApp.Data
 
         }
 
-        public string qSymbol{ get; set; }
+        public string qSymbol { get; set; }
+        public int PurchasePrice { get; set; }
+        public int ShareAmount { get; set; }
+        public decimal PurchaseFees { get; set; }
+        public decimal SellingFees { get; set; }
+        public decimal ProfitDollar { get; set; }
+        public decimal ProfitPercent { get; set; }
         
 		
 		
