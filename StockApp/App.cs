@@ -3,20 +3,26 @@
 using Xamarin.Forms;
 using StockApp.Data;
 using StockApp.Views;
+using StockApp.ViewModel;
 
 namespace StockApp
 {
 	public class App
 	{
 		public static Page GetMainPage ()
-		{	
-           // var servResponse = new StockService();
-           // stockQuote quote = servResponse.getQuote();
+		{
+            sService = new StockService();
+            var ssvm = new StockServiceViewModel(sService);
             
-            NavigationPage mainNav = new NavigationPage(new StockInfoPage());
+            NavigationPage mainNav = new NavigationPage(new StockInfoPage(sService, ssvm));
 
             return mainNav;
 		}
+
+        public static string qsymbol;
+        public static StockService sService;
+
+        
 	}
 }
 

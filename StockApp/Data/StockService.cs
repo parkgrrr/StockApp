@@ -8,9 +8,9 @@ namespace StockApp.Data
 
 	public class StockService
 	{
-		public StockService ()
+		public StockService ()//string tickerInput)
 		{
-            qSymbol = "AMD"; //The constructor sets the quote symbol property 
+            //qSymbol = tickerInput; //The constructor sets the quote symbol property 
             
 		}
         /// <summary>
@@ -29,7 +29,7 @@ namespace StockApp.Data
 
         }
 
-        private string qSymbol;
+        public string qSymbol{ get; set; }
         
 		
 		

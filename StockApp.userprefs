@@ -1,12 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.AVD_for_Galaxy_Nexus_by_Google" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockApp\stockQuote.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.10.71.34.101:5555" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Android\MainActivity.cs">
     <Files>
-      <File FileName="StockApp\StockService.cs" Line="1" Column="1" />
-      <File FileName="Components\restsharp-104.4.0.1\samples\RestSharp.Android.Sample\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Components\restsharp-104.4.0.1\samples\RestSharp.Android.Sample\MainActivity.cs" Line="27" Column="27" />
       <File FileName="StockApp\App.cs" Line="1" Column="1" />
-      <File FileName="Android\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="StockApp\stockQuote.cs" Line="1" Column="1" />
+      <File FileName="Android\MainActivity.cs" Line="4" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

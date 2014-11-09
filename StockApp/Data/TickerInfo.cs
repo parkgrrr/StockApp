@@ -9,5 +9,12 @@ namespace StockApp.Data
     /// </summary>
     class TickerInfo
     {
+        string tickerSymbol;
+
+        public string TickerSymbol
+        {
+            get { return tickerSymbol; }
+            set { tickerSymbol = value; }
+        }
     }
 }
