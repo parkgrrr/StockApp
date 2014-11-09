@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using System.Threading.Tasks;
 using StockApp.Data;
 using StockApp.ViewModel;
+using StockApp.Views;
 
 namespace StockApp.Views
 {
@@ -20,6 +21,7 @@ namespace StockApp.Views
         {
             Title = "Stock Quotr"; 
             createToolbarSearch(ssvm);
+            createCalcSearch(ssvm);
             ToolbarItems.Add(calculate);
             ToolbarItems.Add(search);
             
@@ -44,27 +46,39 @@ namespace StockApp.Views
             {
                 await Navigation.PushAsync(new StockSearchPage(ssvm));
             });
-            calculate = new ToolbarItem("Calculate", null, async () =>
-            {
-                await Navigation.PushAsync(new StockSearchPage(ssvm));
-            });
-
             
-                
-
-                                        
-                       
-
         }
 
+        private void createCalcSearch(StockServiceViewModel ssvm)
+        {
+            if (calculate != null)
+            {
+                return;
+            }
+            calculate = new ToolbarItem("Calculate", null, async () =>
+            {
+                await Navigation.PushAsync(new StockCalcPage(ssvm));
+            });
+        }
+
+
+
+
+
+
+        /// <summary>
+        /// If a stock symbol has been assigned by the user, their ticker info will be displayed.  If not, instructions will be displayed on how to use the app.
+        /// </summary>
+        /// <param name="sService"></param>
         private void createLayout(StockService sService)
         {
             if (sService.qSymbol != null)
             {
+                
                 var quoteObj = sService.getQuote();
                 var labelQuote = new Label
                 {
-                    Text = quoteObj.Name+" "+quoteObj.LastPrice,
+                    Text = quoteObj.Name+" "+quoteObj.LastPrice+ " "+quoteObj.PurchasePrice,
 
                 };
                 Content = new StackLayout
@@ -73,6 +87,7 @@ namespace StockApp.Views
                     VerticalOptions = LayoutOptions.Center,
                     Children = { labelQuote }
                 };
+                
             }
             else
             {
@@ -90,6 +105,9 @@ namespace StockApp.Views
             }
         }  
 
+        /// <summary>
+        /// A new layout is generated every time the page is loaded.
+        /// </summary>
         protected override void OnAppearing()
         {
             
@@ -97,8 +115,7 @@ namespace StockApp.Views
 
            // var servResponse = new StockService("amd");
             
-
-            
+                       
             
         }
     }

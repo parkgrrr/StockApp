@@ -136,12 +136,48 @@ namespace StockApp.Data
             set { open = value; }
         }
 
-        private int purchasePrice;
+        private decimal purchasePrice;
+
+        public decimal PurchasePrice
+        {
+            get { return purchasePrice; }
+            set { purchasePrice = value; }
+        }
         private int shareAmount;
+
+        public int ShareAmount
+        {
+            get { return shareAmount; }
+            set { shareAmount = value; }
+        }
         private decimal purchaseFees;
+
+        public decimal PurchaseFees
+        {
+            get { return purchaseFees; }
+            set { purchaseFees = value; }
+        }
         private decimal sellingFees;
+
+        public decimal SellingFees
+        {
+            get { return sellingFees; }
+            set { sellingFees = value; }
+        }
         private decimal profitDollar;
+
+        public decimal ProfitDollar
+        {
+            get { return profitDollar; }
+            set { profitDollar = value; }
+        }
         private decimal profitPercent;
+
+        public decimal ProfitPercent
+        {
+            get { return profitPercent; }
+            set { profitPercent = value; }
+        }
 
         public void calculateProfit()
         {

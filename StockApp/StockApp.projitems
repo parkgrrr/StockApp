@@ -13,7 +13,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\stockQuote.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\StockService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\TickerInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\stockQuoteViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\StockServiceViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StockCalcPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\StockInfoPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\StockSearchPage.cs" />
   </ItemGroup>

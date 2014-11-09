@@ -14,6 +14,7 @@ namespace StockApp
             sService = new StockService();
             var ssvm = new StockServiceViewModel(sService);
             
+            
             NavigationPage mainNav = new NavigationPage(new StockInfoPage(sService, ssvm));
 
             return mainNav;
@@ -21,6 +22,9 @@ namespace StockApp
 
         public static string qsymbol;
         public static StockService sService;
+        public static stockQuote sQuote;
+        
+        
 
         
 	}
