@@ -1,11 +1,36 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.10.71.34.101:5555" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Android\MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Android\Properties\AndroidManifest.xml">
     <Files>
-      <File FileName="Components\restsharp-104.4.0.1\samples\RestSharp.Android.Sample\MainActivity.cs" Line="27" Column="27" />
-      <File FileName="StockApp\App.cs" Line="1" Column="1" />
+      <File FileName="Components\restsharp-104.4.0.1\samples\RestSharp.Android.Sample\MainActivity.cs" Line="4" Column="4" />
+      <File FileName="StockApp\App.cs" Line="13" Column="13" />
       <File FileName="Android\MainActivity.cs" Line="4" Column="4" />
+      <File FileName="Android\Properties\AndroidManifest.xml" Line="12" Column="12" />
+      <File FileName="Android\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="StockApp\Views\StockInfoPage.cs" Line="6" Column="6" />
+      <File FileName="StockApp\Data\StockService.cs" Line="40" Column="40" />
+      <File FileName="StockApp\ViewModel\StockServiceViewModel.cs" Line="49" Column="49" />
+      <File FileName="StockApp\Views\StockSearchPage.cs" Line="10" Column="10" />
+      <File FileName="StockApp\Data\stockQuote.cs" Line="8" Column="8" />
+      <File FileName="StockApp\Views\StockCalcPage.cs" Line="3" Column="3" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="StockApp" expanded="True">
+            <Node name="Data" expanded="True" />
+            <Node name="ViewModel" expanded="True" />
+            <Node name="Views" expanded="True" />
+          </Node>
+          <Node name="StockApp.Android" expanded="True">
+            <Node name="ComponentReferenceFolder" expanded="True" />
+            <Node name="Properties" expanded="True">
+              <Node name="AndroidManifest.xml" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

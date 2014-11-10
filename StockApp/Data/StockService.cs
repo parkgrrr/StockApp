@@ -29,13 +29,26 @@ namespace StockApp.Data
 
         }
 
+        public void calcQuote(decimal lastPrice)
+        {
+            //var Calc = new calcResult();
+            var PurchaseTotal = ((PurchasePrice * ShareAmount) + (PurchaseFees + SellingFees));
+            var SellingTotal = (lastPrice * ShareAmount);
+            ProfitDollar = SellingTotal - PurchaseTotal;
+            ProfitPercent = (ProfitDollar / PurchaseTotal) * 100;
+            calcSet = true;
+            
+
+        }
+
         public string qSymbol { get; set; }
-        public int PurchasePrice { get; set; }
+        public decimal PurchasePrice { get; set; }
         public int ShareAmount { get; set; }
         public decimal PurchaseFees { get; set; }
         public decimal SellingFees { get; set; }
         public decimal ProfitDollar { get; set; }
         public decimal ProfitPercent { get; set; }
+        public bool calcSet { get; set; }
         
 		
 		

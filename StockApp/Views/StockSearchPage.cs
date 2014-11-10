@@ -18,7 +18,7 @@ namespace StockApp.Views
             //InitializeComponent();
  
             this.BindingContext = stockServiceViewModel;
-            //Title = "Stock Search";
+            Title = "Ticker Symbol Search";
             //Padding = new Thickness(20);
             var tickerInput = new Entry { Placeholder = "Enter Stock Symbol" };
             tickerInput.SetBinding(Entry.TextProperty, "qSymbol");

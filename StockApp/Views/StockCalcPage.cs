@@ -35,7 +35,7 @@ namespace StockApp.Views
                 //BackgroundColor = Colours.BackgroundGrey
             };
 
-            btnSubmit.Clicked += SetStock;
+            btnSubmit.Clicked += SetCalc;
 
             Content = new StackLayout
             {
@@ -48,7 +48,7 @@ namespace StockApp.Views
 
 
 
-        async void SetStock(object sender, EventArgs eventArgs)
+        async void SetCalc(object sender, EventArgs eventArgs)
         {
 
 

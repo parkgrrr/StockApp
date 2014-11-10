@@ -19,7 +19,7 @@ namespace StockApp.Views
         public StockInfoPage(StockService sService, StockServiceViewModel ssvm)
         {
             Title = "Stock Quotr"; 
-            createToolbarSearch(ssvm);
+            createToolbars(ssvm);
             ToolbarItems.Add(calculate);
             ToolbarItems.Add(search);
             
@@ -32,7 +32,7 @@ namespace StockApp.Views
         /// <summary>
         /// Creates 2 tool bar items in the navigation
         /// </summary>
-        private void createToolbarSearch(StockServiceViewModel ssvm)
+        private void createToolbars(StockServiceViewModel ssvm)
         {
             if (search != null)
             {
@@ -61,49 +61,75 @@ namespace StockApp.Views
         {
             if (sService.qSymbol != null)
             {
+                if (sService.ShareAmount != 0)
+              {
                 var quoteObj = sService.getQuote();
+                sService.calcQuote(quoteObj.LastPrice);
                 var labelName = new Label
                 {
-                    Text = quoteObj.Name,
-
-                };
-                var labelLastPrice = new Label
-                {
-                    Text = quoteObj.LastPrice.ToString(),
-
-                };
-                var labelChange = new Label
-                {
-                    Text = quoteObj.Change.ToString(),
-
-                };
-                var labelPercent = new Label
-                {
-                    Text = quoteObj.ChangePercent.ToString(),
-
-                };
-                var labelTime = new Label
-                {
-                    Text = quoteObj.TimeStamp,
-
-                };
-                var labelMarket = new Label
-                {
-                    Text = quoteObj.MarketCap.ToString(),
-
-                };
-                var labelVolume = new Label
-                {
-                    Text = quoteObj.Volume.ToString(),
+                    //Text = quoteObj.Name+" ("+sService.qSymbol+")",
+                    Text = "Profit Dollar: " + sService.ProfitDollar.ToString("0.###") + ", Profit Percent: " + sService.ProfitPercent.ToString("0.##"),
 
                 };
                 Content = new StackLayout
                 {
                     //Spacing = 10,
                     VerticalOptions = LayoutOptions.Center,
-                    Children = { labelName, labelLastPrice, labelChange, labelPercent }
+                    Children = { labelName, }
                 };
+                sService.ShareAmount = 0;
+              }
+                else
+                {
+                    var quoteObj = sService.getQuote();
+                    //var calcObj = sService.calcQuote();
+                    var labelName = new Label
+                    {
+                        Text = quoteObj.Name + " (" + sService.qSymbol + ")",
+                        //Text = "Profit Dollar: " + sService.ProfitDollar.ToString() + ", Profit Percent: " + sService.ProfitPercent.ToString(),
+
+                    };
+
+                    var labelLastPrice = new Label
+                    {
+                        Text = quoteObj.LastPrice.ToString(),
+
+                    };
+                    var labelChange = new Label
+                    {
+                        Text = quoteObj.Change.ToString(),
+
+                    };
+                    var labelPercent = new Label
+                    {
+                        Text = quoteObj.ChangePercent.ToString()+"amount of shares "+ sService.ShareAmount.ToString()+"purchase price"+ sService.PurchasePrice.ToString(),
+
+                    };
+                    var labelTime = new Label
+                    {
+                        Text = quoteObj.TimeStamp,
+
+                    };
+                    var labelMarket = new Label
+                    {
+                        Text = quoteObj.MarketCap.ToString(),
+
+                    };
+                    var labelVolume = new Label
+                    {
+                        Text = quoteObj.Volume.ToString(),
+
+                    };
+                    Content = new StackLayout
+                    {
+                        //Spacing = 10,
+                        VerticalOptions = LayoutOptions.Center,
+                        Children = { labelName, labelLastPrice, labelChange, labelPercent }
+                    };
+                }
+                
             }
+            
             else
             {
                 var labelTest = new Label

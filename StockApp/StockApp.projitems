@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\calcResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\stockQuote.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\StockService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\TickerInfo.cs" />

@@ -6,6 +6,9 @@ using StockApp.Data;
 
 namespace StockApp.ViewModel
 {
+    /// <summary>
+    /// This View Model has properties that bind to the StockService model, and are set through the search and calculate pages
+    /// </summary>
     class StockServiceViewModel : INotifyPropertyChanged
     {
         private StockService _stockService;
@@ -30,7 +33,7 @@ namespace StockApp.ViewModel
             }
         }
 
-        public int PurchasePrice
+        public decimal PurchasePrice
         {
             get { return _stockService != null ? _stockService.PurchasePrice : 0; }
             set

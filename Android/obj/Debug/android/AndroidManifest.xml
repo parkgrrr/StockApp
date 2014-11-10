@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="StockApp.Android">
-  <uses-sdk android:minSdkVersion="19" />
-  <application android:label="StockApp.Android" android:name="mono.android.app.Application" android:debuggable="true">
+  <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
+  <application android:label="Stock Quotr" android:icon="@drawable/icon" android:name="mono.android.app.Application" android:debuggable="true">
     <activity android:configChanges="orientation|screenSize" android:label="StockApp.Android.Android" android:name="stockapp.android.MainActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="StockApp.Android.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">

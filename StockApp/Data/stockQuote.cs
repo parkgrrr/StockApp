@@ -136,12 +136,7 @@ namespace StockApp.Data
             set { open = value; }
         }
 
-        private int purchasePrice;
-        private int shareAmount;
-        private decimal purchaseFees;
-        private decimal sellingFees;
-        private decimal profitDollar;
-        private decimal profitPercent;
+       
 
         public void calculateProfit()
         {
