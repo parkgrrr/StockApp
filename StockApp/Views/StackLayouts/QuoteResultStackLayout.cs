@@ -10,12 +10,12 @@ namespace StockApp.Views.StackLayouts
     {
          public static StackLayout createStack(StockService sService)
         {
+            
             var quoteObj = sService.getQuote();
-            //var calcObj = sService.calcQuote();
+            if (quoteObj.Name == null || quoteObj.Name == "") { quoteObj.Name = "Please make sure to enter in a valid stock quote, such as MSFT."; }
             var labelName = new Label
             {
-                Text = quoteObj.Name + " (" + sService.qSymbol + ")",
-                //Text = "Profit Dollar: " + sService.ProfitDollar.ToString() + ", Profit Percent: " + sService.ProfitPercent.ToString(),
+                Text = quoteObj.Name + " (" + sService.qSymbol + ")",              
 
             };
 

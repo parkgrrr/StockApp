@@ -26,20 +26,28 @@ namespace StockApp.Data
         /// <param name="rawJson">This method accepts a json string passed in through the constructor</param>
         private void deserializeQuote(string rawJson)
         {
-            var jParsed = JObject.Parse(rawJson);
-            name = jParsed["Name"].Value<string>();
-            lastPrice = jParsed["LastPrice"].Value<decimal>();
-            change = jParsed["Change"].Value<decimal>();
-            changePercent = jParsed["ChangePercent"].Value<decimal>();
-            timeStamp = jParsed["Timestamp"].Value<string>();
-            mSDATE = jParsed["MSDate"].Value<decimal>();
-            marketCap = jParsed["MarketCap"].Value<decimal>();
-            volume = jParsed["Volume"].Value<double>();
-            changeYTD = jParsed["ChangeYTD"].Value<decimal>();
-            changePercentYTD = jParsed["ChangePercentYTD"].Value<decimal>();
-            high = jParsed["High"].Value<decimal>();
-            low = jParsed["Low"].Value<decimal>();
-            open = jParsed["Open"].Value<decimal>();
+            try
+            {
+                var jParsed = JObject.Parse(rawJson);
+                name = jParsed["Name"].Value<string>();
+                lastPrice = jParsed["LastPrice"].Value<decimal>();
+                change = jParsed["Change"].Value<decimal>();
+                changePercent = jParsed["ChangePercent"].Value<decimal>();
+                timeStamp = jParsed["Timestamp"].Value<string>();
+                mSDATE = jParsed["MSDate"].Value<decimal>();
+                marketCap = jParsed["MarketCap"].Value<decimal>();
+                volume = jParsed["Volume"].Value<double>();
+                changeYTD = jParsed["ChangeYTD"].Value<decimal>();
+                changePercentYTD = jParsed["ChangePercentYTD"].Value<decimal>();
+                high = jParsed["High"].Value<decimal>();
+                low = jParsed["Low"].Value<decimal>();
+                open = jParsed["Open"].Value<decimal>();
+            }
+            catch
+            {
+                return;
+            }
+            
         }
 
         private string name;

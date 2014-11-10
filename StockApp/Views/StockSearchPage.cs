@@ -29,7 +29,7 @@ namespace StockApp.Views
             
             var btnSubmit = new Button
             {
-                Text = "Set Quote",
+                Text = "Get Quote",
                 BorderRadius = 5,
                 TextColor = Color.White,
                 //BackgroundColor = Colours.BackgroundGrey

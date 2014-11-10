@@ -30,7 +30,7 @@ namespace StockApp.Views
             var btnSubmit = new Button
             {
                 Text = "Calculate",
-                BorderRadius = 5,
+                BorderRadius = 10,
                 TextColor = Color.White,
                 //BackgroundColor = Colours.BackgroundGrey
             };
@@ -50,8 +50,7 @@ namespace StockApp.Views
 
         async void SetCalc(object sender, EventArgs eventArgs)
         {
-
-
+            
             await Navigation.PopAsync();
 
         }

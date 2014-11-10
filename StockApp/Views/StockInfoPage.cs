@@ -54,7 +54,7 @@ namespace StockApp.Views
 
         private void createLayout(StockService sService)
         {
-            if (sService.qSymbol != null)
+            if (sService.qSymbol != null && sService.qSymbol != "")
             {
                 if (sService.ShareAmount != 0)
               {
