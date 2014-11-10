@@ -118,6 +118,7 @@ namespace StockApp.ViewModel
             }
         }
 
+
         public decimal ProfitPercent
         {
             get { return _stockService != null ? _stockService.ProfitPercent : 0; }

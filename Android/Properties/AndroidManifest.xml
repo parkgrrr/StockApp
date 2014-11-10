@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="StockApp.Android">
 	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
-	<application android:label="Stock Quotr" android:icon="@drawable/icon"></application>
+	<application android:label="Stock Quotr" android:icon="@drawable/icon" android:theme="@android:style/Theme.Holo.Light"></application>
 	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

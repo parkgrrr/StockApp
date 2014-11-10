@@ -7,14 +7,21 @@ using StockApp.ViewModel;
 
 namespace StockApp.Views
 {
+    /// <summary>
+    /// This page calculates Profits or losses
+    /// </summary>
     class StockCalcPage : ContentPage
     {
+        /// <summary>
+        /// This Constructor builds the page
+        /// </summary>
+        /// <param name="stockServiceViewModel"></param>
         public StockCalcPage(StockServiceViewModel stockServiceViewModel)
         {
             this.BindingContext = stockServiceViewModel;
+            Title = "Calculate Profits/Losses"; 
+            //var tickerLabel = new Label { Text = "Calculate your profits"};
 
-            var tickerLabel = new Label { Text = "Calculate your profits"};
-            //tickerLabel.SetBinding(Entry.TextProperty, "qSymbol");
             var sharePrice = new Label { Text = "Enter Price Per Share" };
             var priceInput = new Entry { Placeholder = "Enter Price Per Share" };
             priceInput.SetBinding(Entry.TextProperty, "PurchasePrice");
@@ -32,7 +39,7 @@ namespace StockApp.Views
                 Text = "Calculate",
                 BorderRadius = 10,
                 TextColor = Color.White,
-                //BackgroundColor = Colours.BackgroundGrey
+                
             };
 
             btnSubmit.Clicked += SetCalc;
@@ -41,7 +48,7 @@ namespace StockApp.Views
             {
                 //Spacing = 10,
                 VerticalOptions = LayoutOptions.Center,
-                Children = { tickerLabel, sharePrice, priceInput, shareLabel, shareInput, purchaseLabel, purchaseInput, sellLabel, sellInput, btnSubmit }
+                Children = { sharePrice, priceInput, shareLabel, shareInput, purchaseLabel, purchaseInput, sellLabel, sellInput, btnSubmit }
             };
 
         }

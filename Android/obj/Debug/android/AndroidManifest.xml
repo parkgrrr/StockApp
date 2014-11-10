@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="StockApp.Android">
   <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
-  <application android:label="Stock Quotr" android:icon="@drawable/icon" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:label="StockApp.Android.Android" android:name="stockapp.android.MainActivity" />
+  <application android:label="Stock Quotr" android:icon="@drawable/icon" android:theme="@android:style/Theme.Holo.Light" android:name="mono.android.app.Application" android:debuggable="true">
+    <activity android:configChanges="orientation|screenSize" android:label="Stock Quotr" android:name="stockapp.android.MainActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="StockApp.Android.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
@@ -10,7 +10,7 @@
         <category android:name="mono.android.intent.category.SEPPUKU.StockApp.Android" />
       </intent-filter>
     </receiver>
-    <activity android:configChanges="orientation|screenSize" android:label="StockApp.Android.Android" android:name="stockapp.android.TrialSplashScreen" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
+    <activity android:configChanges="orientation|screenSize" android:label="Stock Quotr" android:name="stockapp.android.TrialSplashScreen" android:theme="@style/Mono.Android.Theme.Splash" android:noHistory="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

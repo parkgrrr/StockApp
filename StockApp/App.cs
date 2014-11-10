@@ -19,7 +19,6 @@ namespace StockApp
             return mainNav;
 		}
 
-        public static string qsymbol;
         public static StockService sService;
 
         

@@ -29,6 +29,10 @@ namespace StockApp.Data
 			
         }
 
+        /// <summary>
+        /// Calculates a users profit or losses with a particular stock
+        /// </summary>
+        /// <param name="lastPrice">this is the last ticker price of a stock</param>
         public void calcQuote(decimal lastPrice)
         {
             //var Calc = new calcResult();

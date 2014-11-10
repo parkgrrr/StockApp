@@ -13,7 +13,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace StockApp.Android
 {
-	[Activity (Label = "StockApp.Android.Android", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "Stock Quotr", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate (Bundle bundle)

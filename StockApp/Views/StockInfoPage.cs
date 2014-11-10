@@ -52,14 +52,19 @@ namespace StockApp.Views
 
         }
 
+        /// <summary>
+        /// This method determines the stack layout that will be displayed on the main page.
+        /// The layout returned varies by the user input.
+        /// </summary>
+        /// <param name="sService">This is the main service passed from the App page</param>
         private void createLayout(StockService sService)
         {
             if (sService.qSymbol != null && sService.qSymbol != "")
             {
                 if (sService.ShareAmount != 0)
-              {
+                {
                   Content = CalcResultStackLayout.createStack(sService);
-              }
+                }
                 else
                 {
                     Content = QuoteResultStackLayout.createStack(sService);
