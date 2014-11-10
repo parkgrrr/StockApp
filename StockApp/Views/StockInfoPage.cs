@@ -5,16 +5,17 @@ using Xamarin.Forms;
 using System.Threading.Tasks;
 using StockApp.Data;
 using StockApp.ViewModel;
+using StockApp.Views.StackLayouts;
 
 namespace StockApp.Views
 {
     /// <summary>
-    /// This page is the main page, and displays financial information about a certain stock.
+    /// This page is the main page, and contains logic to display different stack layouts.
     /// </summary>
     class StockInfoPage : ContentPage
     {
         /// <summary>
-        /// Constructor sets the title page and creates the toolbar with a search and calculate icon
+        /// Constructor sets the title page and creates the toolbar with a search and calculate tab
         /// </summary>
         public StockInfoPage(StockService sService, StockServiceViewModel ssvm)
         {
@@ -47,13 +48,7 @@ namespace StockApp.Views
             calculate = new ToolbarItem("Calculate", null, async () =>
             {
                 await Navigation.PushAsync(new StockCalcPage(ssvm));
-            });
-
-            
-                
-
-                                        
-                       
+            });          
 
         }
 
@@ -63,86 +58,17 @@ namespace StockApp.Views
             {
                 if (sService.ShareAmount != 0)
               {
-                var quoteObj = sService.getQuote();
-                sService.calcQuote(quoteObj.LastPrice);
-                var labelName = new Label
-                {
-                    //Text = quoteObj.Name+" ("+sService.qSymbol+")",
-                    Text = "Profit Dollar: " + sService.ProfitDollar.ToString("0.###") + ", Profit Percent: " + sService.ProfitPercent.ToString("0.##"),
-
-                };
-                Content = new StackLayout
-                {
-                    //Spacing = 10,
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = { labelName, }
-                };
-                sService.ShareAmount = 0;
+                  Content = CalcResultStackLayout.createStack(sService);
               }
                 else
                 {
-                    var quoteObj = sService.getQuote();
-                    //var calcObj = sService.calcQuote();
-                    var labelName = new Label
-                    {
-                        Text = quoteObj.Name + " (" + sService.qSymbol + ")",
-                        //Text = "Profit Dollar: " + sService.ProfitDollar.ToString() + ", Profit Percent: " + sService.ProfitPercent.ToString(),
-
-                    };
-
-                    var labelLastPrice = new Label
-                    {
-                        Text = quoteObj.LastPrice.ToString(),
-
-                    };
-                    var labelChange = new Label
-                    {
-                        Text = quoteObj.Change.ToString(),
-
-                    };
-                    var labelPercent = new Label
-                    {
-                        Text = quoteObj.ChangePercent.ToString()+"amount of shares "+ sService.ShareAmount.ToString()+"purchase price"+ sService.PurchasePrice.ToString(),
-
-                    };
-                    var labelTime = new Label
-                    {
-                        Text = quoteObj.TimeStamp,
-
-                    };
-                    var labelMarket = new Label
-                    {
-                        Text = quoteObj.MarketCap.ToString(),
-
-                    };
-                    var labelVolume = new Label
-                    {
-                        Text = quoteObj.Volume.ToString(),
-
-                    };
-                    Content = new StackLayout
-                    {
-                        //Spacing = 10,
-                        VerticalOptions = LayoutOptions.Center,
-                        Children = { labelName, labelLastPrice, labelChange, labelPercent }
-                    };
-                }
-                
+                    Content = QuoteResultStackLayout.createStack(sService);
+                }                
             }
             
             else
             {
-                var labelTest = new Label
-                {
-                    Text = "Click on the Search button to get the ticker price of a stock.  Then, click on the calculator button to determine your profit or loss."//sService.qSymbol
-
-                };
-                Content = new StackLayout
-                {
-                    //Spacing = 10,
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = { labelTest }
-                };
+                Content = InstructionsStackLayout.createStack();
             }
         }  
 

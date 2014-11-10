@@ -13,8 +13,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\calcResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\stockQuote.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\StockService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\TickerInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\StockServiceViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StackLayouts\CalcResultStackLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StackLayouts\InstructionsStackLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StackLayouts\QuoteResultStackLayout.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\StockCalcPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\StockInfoPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\StockSearchPage.cs" />
