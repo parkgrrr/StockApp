@@ -20,7 +20,7 @@ namespace StockApp.Views
             this.BindingContext = stockServiceViewModel;
             Title = "Ticker Symbol Search";
             //Padding = new Thickness(20);
-            var tickerInput = new Entry { Placeholder = "Enter Stock Symbol" };
+            var tickerInput = new Entry { Placeholder = "Enter Stock Symbol", StyleId = "SymbolInput" };
             tickerInput.SetBinding(Entry.TextProperty, "qSymbol");
             //var shareInput = new Entry { Placeholder = "Enter Amount of Shares" };
             //shareInput.SetBinding(Entry.TextProperty, "ShareAmount");
@@ -32,7 +32,8 @@ namespace StockApp.Views
                 Text = "Get Quote",
                 BorderRadius = 5,
                 TextColor = Color.White,
-                //BackgroundColor = Colours.BackgroundGrey
+                //BackgroundColor = Colours.BackgroundGrey,
+				StyleId = "QuoteButton"
             };
             
             btnSubmit.Clicked += SetStock;

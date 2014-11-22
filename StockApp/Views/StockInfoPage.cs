@@ -21,6 +21,7 @@ namespace StockApp.Views
         {
             Title = "Stock Quotr"; 
             createToolbars(ssvm);
+			StyleId = "StockMain";
             ToolbarItems.Add(calculate);
             ToolbarItems.Add(search);
             
@@ -43,12 +44,18 @@ namespace StockApp.Views
             //string iconName = Device.OnPlatform(null, "ic_action_search.png", null);
             search = new ToolbarItem("Search", null, async () =>
             {
-                await Navigation.PushAsync(new StockSearchPage(ssvm));
-            });
+
+					await Navigation.PushAsync(new StockSearchPage(ssvm));
+					this.StyleId = "SearchButton";
+				});
+			//search.StyleId = "SearchButton";
             calculate = new ToolbarItem("Calculate", null, async () =>
             {
-                await Navigation.PushAsync(new StockCalcPage(ssvm));
-            });          
+
+					await Navigation.PushAsync(new StockCalcPage(ssvm));
+					this.StyleId = "CalcButton";
+            });
+			//calculate.StyleId = "CalculateButton";
 
         }
 

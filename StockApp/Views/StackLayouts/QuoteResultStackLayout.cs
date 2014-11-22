@@ -27,7 +27,8 @@ namespace StockApp.Views.StackLayouts
             var labelName = new Label
             {
                 Text = quoteObj.Name,
-                Font = Font.SystemFontOfSize(50, FontAttributes.Bold)
+                Font = Font.SystemFontOfSize(50, FontAttributes.Bold),
+				StyleId = "CompName"
 
             };
             var labelSymbol = new Label

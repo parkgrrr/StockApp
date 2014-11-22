@@ -4,7 +4,9 @@ C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\StockApp.Android.dll
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\StockApp.Android.apk
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\StockApp.Android-Signed.apk
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\FormsViewGroup.dll
+C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\RestSharp.MonoDroid.dll
+C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Android.Support.v13.dll
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Android.Support.v4.dll
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Forms.Core.dll
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
@@ -20,5 +22,3 @@ C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\res\values\strings.x
 C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\res\drawable\icon.png
 C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\R.cs.flag
 C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\uploadflags.txt
-C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Android.Support.v13.dll
-C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Newtonsoft.Json.dll
