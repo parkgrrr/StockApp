@@ -20,6 +20,7 @@ namespace StockApp.Views
             {
                 Text = "Click on the Search button to get the ticker price of a stock.  Then click on the calculator button to determine your profit or loss.",
                 Font = Font.SystemFontOfSize (25),
+				StyleId = "Instructions"
             };
             var Content = new StackLayout
             {

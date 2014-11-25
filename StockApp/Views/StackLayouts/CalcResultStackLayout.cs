@@ -26,7 +26,8 @@ namespace StockApp.Views
             var labelCText = new Label
             {
                 Text = "Dollar Change",
-                Font = Font.SystemFontOfSize(50)
+                Font = Font.SystemFontOfSize(50),
+				StyleId = "dollarChange"
 
             };
             var labelChange = new Label

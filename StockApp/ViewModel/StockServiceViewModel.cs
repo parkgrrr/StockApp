@@ -35,7 +35,7 @@ namespace StockApp.ViewModel
 
         public decimal PurchasePrice
         {
-            get { return _stockService != null ? _stockService.PurchasePrice : 0; }
+            get { return _stockService != null ? _stockService.PurchasePrice : 0.00m; }
             set
             {
                 if (_stockService != null)
@@ -69,7 +69,7 @@ namespace StockApp.ViewModel
 
         public decimal PurchaseFees
         {
-            get { return _stockService != null ? _stockService.PurchaseFees : 0; }
+			get { return _stockService != null ? _stockService.PurchaseFees : 0.00m; }
             set
             {
                 if (_stockService != null)
@@ -86,7 +86,7 @@ namespace StockApp.ViewModel
 
         public decimal SellingFees
         {
-            get { return _stockService != null ? _stockService.SellingFees : 0; }
+			get { return _stockService != null ? _stockService.SellingFees : 0.00m; }
             set
             {
                 if (_stockService != null)
@@ -103,7 +103,7 @@ namespace StockApp.ViewModel
 
         public decimal ProfitDollar
         {
-            get { return _stockService != null ? _stockService.ProfitDollar : 0; }
+			get { return _stockService != null ? _stockService.ProfitDollar : 0.00m; }
             set
             {
                 if (_stockService != null)

@@ -13,7 +13,6 @@ C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Forms.Platfo
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Forms.Xaml.dll
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\Parker\Documents\GitHub\StockApp\Android\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\StockApp.Android.csprojResolveAssemblyReference.cache
 C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\StockApp.Android.dll
 C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\StockApp.Android.pdb
 C:\Users\Parker\Documents\GitHub\StockApp\Android\obj\Debug\android\bin\StockApp.Android.apk

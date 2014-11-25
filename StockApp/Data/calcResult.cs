@@ -9,8 +9,8 @@ namespace StockApp.Data
     /// </summary>
     public class calcResult
     {
-        public decimal profitDollar{get; set;}
-        public decimal profitPercent { get; set; }
+        public decimal? profitDollar{get; set;}
+        public decimal? profitPercent { get; set; }
     }
 
     

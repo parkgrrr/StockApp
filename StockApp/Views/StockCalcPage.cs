@@ -12,6 +12,7 @@ namespace StockApp.Views
     /// </summary>
     class StockCalcPage : ContentPage
     {
+
         /// <summary>
         /// This Constructor builds the page
         /// </summary>
@@ -22,23 +23,28 @@ namespace StockApp.Views
             Title = "Calculate Profits/Losses"; 
             //var tickerLabel = new Label { Text = "Calculate your profits"};
 
-            var sharePrice = new Label { Text = "Enter Price Per Share" };
-            var priceInput = new Entry { Placeholder = "Enter Price Per Share" };
+			var sharePrice = new Label { Text = "Enter Price Per Share", };
+			var priceInput = new Entry { Placeholder = "Enter Price Per Share", StyleId = "priceInput"};
             priceInput.SetBinding(Entry.TextProperty, "PurchasePrice");
+			priceInput.Keyboard = Keyboard.Numeric;
             var shareLabel = new Label { Text = "Enter Amount of Shares Purchased" };
-            var shareInput = new Entry { Placeholder = "Enter Amount of Shares" };
+			var shareInput = new Entry { Placeholder = "Enter Amount of Shares", StyleId = "shareInput"};
             shareInput.SetBinding(Entry.TextProperty, "ShareAmount");
+			shareInput.Keyboard = Keyboard.Numeric;
             var purchaseLabel = new Label { Text = "Enter Purchasing Fees" };
-            var purchaseInput = new Entry { Placeholder = "Enter Purchasing Fees" };
-            purchaseInput.SetBinding(Entry.TextProperty, "PurchaseFees");
+			var purchaseInput = new Entry { Placeholder = "Enter Purchasing Fees", StyleId = "purchaseInput"};
+			purchaseInput.SetBinding(Entry.TextProperty, "PurchaseFees");
+			purchaseInput.Keyboard = Keyboard.Numeric;
             var sellLabel = new Label { Text = "Enter Selling Fees" };
-            var sellInput = new Entry { Placeholder = "Enter Selling Fees" };
+			var sellInput = new Entry { Placeholder = "Enter Selling Fees", StyleId = "sellInput"};
             sellInput.SetBinding(Entry.TextProperty, "SellingFees");
+			//sellInput.Keyboard = Keyboard.Numeric;
             var btnSubmit = new Button
             {
                 Text = "Calculate",
                 BorderRadius = 10,
                 TextColor = Color.White,
+				StyleId = "calcSub"
                 
             };
 
